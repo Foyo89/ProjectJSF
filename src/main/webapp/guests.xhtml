@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <head>
+        <title>TODO supply a title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <div>Księga gości</div>
+        
+        <p></p>
+        
+        
+        <f:view>
+            <h:form>
+                <h:outputLabel>Guest Name:</h:outputLabel>
+                <h:inputText value="#{guestsController.post.name}"></h:inputText>
+                <br></br>
+                    
+                <h:outputLabel>Text:</h:outputLabel>
+                <h:inputText value="#{guestsController.post.text}"></h:inputText>
+                <br></br>
+                <h:commandButton action="#{guestsController.save}" value="Zapisz"></h:commandButton>
+                
+                
+                
+                
+            </h:form>
+        </f:view>
+        
+        
+
+            
+            
+        
+        
+    </body>
+</html>
