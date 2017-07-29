@@ -27,14 +27,13 @@ public class Post implements Serializable{
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    
-    @Column
     private Integer id;
     @Column
     private String name;
     @Column
     private String text;
-    @Column Date adddate;
+    @Column 
+    private Date adddate;
 
     public static long getSerialVersionUID() {
         return serialVersionUID;

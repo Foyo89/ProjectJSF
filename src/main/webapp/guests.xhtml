@@ -24,8 +24,9 @@ and open the template in the editor.
                 <h:inputText value="#{guestsController.post.name}"></h:inputText>
                 <br></br>
                     
-                <h:outputLabel>Text:</h:outputLabel>
-                <h:inputText value="#{guestsController.post.text}"></h:inputText>
+                <h:outputLabel>Text:</h:outputLabel><br></br>
+                <h:inputTextarea value="#{guestsController.post.text}" rows="20"></h:inputTextarea>
+                
                 <br></br>
                 <h:commandButton action="#{guestsController.save}" value="Zapisz"></h:commandButton>
                 
@@ -33,6 +34,8 @@ and open the template in the editor.
                 
                 
             </h:form>
+            
+            <a href="/JSFLesson/index.xhtml">Do strony głównej</a>
         </f:view>
         
         

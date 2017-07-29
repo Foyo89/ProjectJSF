@@ -1,16 +1,49 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <title>Facelet Title</title>
     </h:head>
     <h:body>
         Hello from Facelets
         <p></p>
-    <a href="/JSFlesson/about.xhtml">O mnie</a> <a href="/JSFlesson/guests.xhtml">Księga gości</a>     
+       
         
+    <a href="/JSFLesson/about.xhtml">O mnie</a> <a href="/JSFLesson/guests.xhtml">Księga gości</a>     
+    <br></br>
+     
+    <h:link rendered="true" value="O mnie" target="/JSFLesson/about.xhtml"></h:link>
+           
+    
+        <p>to sie wyswietla</p>
+    
+    
+    <f:view>
+            <h:form  rendered="#{!sessionController.loggedIn}">
+                <h:outputLabel>Podaj login:</h:outputLabel>
+                <h:inputText value="#{sessionController.login}"></h:inputText>
+                <br></br>
+                    
+                <h:outputLabel>Hasło:</h:outputLabel>
+                <h:inputSecret value="#{sessionController.password}"></h:inputSecret>   
+                
+                <br></br>
+                <h:commandButton action="#{sessionController.isPasswordCorrect()}" value="Zaloguj"></h:commandButton>
+                
+                
+                
+                
+            </h:form>
+            
+            
+        </f:view>
+    
+    
+    
         <p><h:outputText value="#{applicationController.ver}"/></p>
+        <p><h:outputText value="#{sessionController.counter}"/></p>
        
     </h:body>
 </html>
